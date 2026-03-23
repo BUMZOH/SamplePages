@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>業務フロー</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 30px;
+    }
+    .chart-box {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+  <h2>業務フロー</h2>
+
+  <div class="chart-box">
+    <div class="mermaid">
+flowchart LR
+    A[受注] --> B[内容確認]
+    B --> C{在庫あり?}
+    C -->|Yes| D[出荷]
+    C -->|No| E[手配]
+    E --> D
+    D --> F[完了]
+    </div>
+  </div>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'default'
+    });
+  </script>
+</body>
+</html>
