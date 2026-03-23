@@ -1,2 +1,15 @@
 # SamplePages
 test of GitHub Pages
+
+
+
+```mermaid
+graph TD;
+	A[開始] --> B[処理];
+	B --> C{判断};
+	C -- はい --> D[処理1];
+	C -- いいえ --> E[処理2];
+	D --> F[終了];
+	E --> F;
+```
+
